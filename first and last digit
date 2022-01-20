@@ -1,0 +1,22 @@
+#include <stdio.h>
+
+int main ()
+{
+  int t, sum = 0, first, last;
+  scanf ("%d", &t);
+  int x[t];
+  for (int i = 0; i < t; i++)
+    {
+      scanf ("%d", &x[i]);
+      last = x[i] % 10;
+      while (x[i] >= 10)
+	{
+	  x[i] /= 10;
+	}
+      first = x[i];
+      sum = first + last;
+      printf ("%d\n", sum);
+      sum = 0;
+    }
+  return 0;
+}
